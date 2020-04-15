@@ -23,17 +23,13 @@ Q3) 아래 코드에서 30이 가지는 문제점은 무엇일까요?
 <
 ```
 
-
-
 ![img](https://lh4.googleusercontent.com/l2YVzVGoOTZcdvG_lklMCw9DlTd7lZrZmvVqX5DLXATC18JJkSJ73tRS612OhyjGrvKQTBTR56XM-nIsGs-AYM4_rkqrizoiTShr6My77mncoBI4ZI5YqK3t6gUF3wQ0FU7lwiZ8)
 
 Q4) 변수란 무엇입니까? 정의하시고 아래와 같이 실습할 시 메모리에 적재되는 과정을 설명하세요(각 10점)
 
 ```javascript
-var a = 10; 
+var a = 10;
 ```
-
-
 
 ![img](https://lh4.googleusercontent.com/ot7qt4d7L6VI0aOX8AfiSUGXL_BK5NWFYf1uKym8v7Rh8PWTilt_S4LxcgH5QN-k3CXRLeBjLrxda-_a85_EkZ9QPuhZ388v9dSrGikSR5HB8DUjPgN5lJZDttaBTOuhwMg5Eg4I)
 
@@ -95,9 +91,9 @@ Q5) 프런트 개발자의 역할과 자바스크립트의 특징에 대해 아�
 
 <br>
 
-자바스크립트에서 변수란 '어떠한  한값을 갖기 위한 메모리 공간 또는 메모리 공간에 주소에 붙인 이름'
+자바스크립트에서 변수란 '어떠한 한값을 갖기 위한 메모리 공간 또는 메모리 공간에 주소에 붙인 이름'
 
-![var a=10;](C:\Users\82109\Desktop\var a=10;.jpg)
+![var a=10;](https://user-images.githubusercontent.com/48181483/81648369-8f027000-9469-11ea-8039-250a0cad1af7.jpg)
 
 자바스크립트 엔진은 ①을 ②③으로 구성되어 있다고 생각하며, ②에서 임의의 메모리 공간을 확보하고 메모리 공간의 선두 주소를 식별자 a가 참조하게 하며 안에 쓰레기 값이 들어있을 수 있어서 undefined로 암묵적으로 초기화한다. 그 후 a = 10; 변수 할당문에서 undefined의 참조가 10이 담겨있는 메모리셀의 선두 참조로 변경되게 되는데 ,이는 원시 값이기 때문이다.
 
@@ -110,7 +106,5 @@ Q5) 프런트 개발자의 역할과 자바스크립트의 특징에 대해 아�
 <br>
 
 백엔드 개발자, 디자이너와 협업하며 사용자와 가장 밀접하게 상호작용함 Html, css, javascript를 바탕으로 프레임워크/라이브러리를 사용하여 사용자에게 view를 보여준다(서버에서 가져온 데이터 뿌리기 관련)
-
-
 
 호이스팅, 동적, 배열이 유사 배열, 인터프리터, ‘프로토타입’기반의 객체지향 프로그래밍 등 자바스크립트 관련 특징이면 전부 정답
