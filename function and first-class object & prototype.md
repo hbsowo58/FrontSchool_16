@@ -78,7 +78,7 @@ __proto__접근자 프로퍼티를 통해 간접적으로 접근
 
 <br>
 
-
+ㄴㅇㅁㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ오전여기까지햇다ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ
 
 ```javascript
 console.log(person.hasOwnProperty('__proto__')); // object.prototype에 존재
