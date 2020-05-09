@@ -28,7 +28,7 @@ Q5) 해당 코드에 주석에 해당되는 부분의 답을 작성하고, 이�
 
 <br>
 
-Q6)  해당 코드의 주석에 해당하는 결과를 작성하세요
+Q6) 해당 코드의 주석에 해당하는 결과를 작성하세요
 
 ![img](https://lh4.googleusercontent.com/dF6i5BeOFbs9g8MzCuzsHb_DRcO6bopjq4rlEl5t7vvq39kA8ESJHEe1qGEspF089zdJqhFiwKH-s1aPO-a3MCAz8UhKQNVqSv_Rt6fNpyk40fbCO3GrlUKv40z7RrlKE3eG_qwJ)
 
@@ -54,7 +54,7 @@ Q9) 해당 코드의 주석에 해당하는 값을 작성하세요
 
 <br>
 
-Q10)  다음 코드의 결과를 작성해 주세요
+Q10) 다음 코드의 결과를 작성해 주세요
 
 ![img](https://lh6.googleusercontent.com/9ypKYX835NopWD3mYD9Z4A2Br1l-u2xxHN-ckzCVb9mgyOpTGCF_wglXpK9KMGVP-853rCZGcPT2IWjU5hTxhvOLetotBRAXeR2NT_VDymdrO9qqE5aZZpqEfgJylZ56wjVcktey)
 
@@ -62,7 +62,7 @@ Q10)  다음 코드의 결과를 작성해 주세요
 
 1
 
-origins.forEach(origin => doubles.push(origin * 2));
+origins.forEach(origin => doubles.push(origin \* 2));
 
 문제의도:For 문을 forEach 문으로 변경할 수 있는가, (forEach 내부에서 for 문이 동작하고 있다)
 
@@ -72,9 +72,9 @@ origins.forEach(origin => doubles.push(origin * 2));
 
 Uncaught TypeError: Cannot read property '0' of undefined at <anonymous>
 
-문제의도: forEach 문의 결괏값은 언제나 undefined이다, 
+문제의도: forEach 문의 결괏값은 언제나 undefined이다,
 
-해설:  pick에 담긴 결과값은 undefined이다, undefined[0]을 찾는 부분에서 타입 에러가 발생
+해설: pick에 담긴 결과값은 undefined이다, undefined[0]을 찾는 부분에서 타입 에러가 발생
 
 <br>
 
@@ -140,7 +140,7 @@ const sum = numarr.reduce((accumulator, currentValue, index, array) => accumulat
 
 9
 
-False 
+False
 Filter의 결괏값과 find의 결괏값을 아느냐
 Filter의 결괏값은 배열이고 find의 결괏값은 해당 요소 값이다
 
@@ -164,7 +164,7 @@ parseInt는 문자열을 숫자로 변경하면서 인수를 parseInt(“ffff”
 
 <br>
 
- parseInt("1", 0, [‘1’,’2’,’3’])
+parseInt("1", 0, [‘1’,’2’,’3’])
 
 parseInt("2", 1, [‘1’,’2’,’3’])
 
@@ -176,10 +176,10 @@ JavaScript 함수는 일반적으로 추가 인수를 무시한다
 
 첫 번째 호출에서 두 번째 인수는 0
 
-기본적으로 기수가 10으로 설정되어 있음을 알고 있으므로 parseInt("1",0) 반환 
+기본적으로 기수가 10으로 설정되어 있음을 알고 있으므로 parseInt("1",0) 반환
 
-1기수가 0이 아니고 2보다 작 으면 NaN 문자열을 보지 않아도 함수가 반환세 번째 호출은 2기수 인수로 전달됩니다. 
+1기수가 0이 아니고 2보다 작 으면 NaN 문자열을 보지 않아도 함수가 반환세 번째 호출은 2기수 인수로 전달됩니다.
 
-이것은 변환할 문자열이 숫자 "0"으로 만 구성된 이진수임을 의미합니다 "1". 
+이것은 변환할 문자열이 숫자 "0"으로 만 구성된 이진수임을 의미합니다 "1".
 
 parseInt 사양 (단계 11)에만 요청 기수의 유효 숫자가 아닌 첫 번째 문자의 왼쪽에 있는 문자열을 구문 분석을 시도했다. 문자열의 첫 문자는 "3"유효한 기본 2 자리가 아니므로 NaN
