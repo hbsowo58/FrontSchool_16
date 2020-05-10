@@ -1,4 +1,4 @@
-# 0511 this & excution context
+# 0511 this
 
 ### this 키워드
 
@@ -14,9 +14,9 @@ this는 자바스크립트 엔진에 의해 암묵적으로 생성되며 코드 
 
 <br>
 
->바인딩
+> 바인딩
 >
->바인딩(binding)이란 식별자와 값을 연결하는 과정을 의미한다. 예를 들어 변수는 할당에 의해 값이 바인딩된다.
+> 바인딩(binding)이란 식별자와 값을 연결하는 과정을 의미한다. 예를 들어 변수는 할당에 의해 값이 바인딩된다.
 
 <br>
 
@@ -26,8 +26,6 @@ this는 자바스크립트 엔진에 의해 암묵적으로 생성되며 코드 
 >
 > 함수의 상위 스코프를 결정하는 방식인 렉시컬 스코프(lexical scope)는 함수 정의가 평가되어 함수 객체가 생성되는 시점에 상위 스코프를 결정한다. this에 바인딩될 객체는 함수 호출 시점에 결정된다.
 
-
-
 호출방식
 
 1. 일반 함수 호출
@@ -35,25 +33,23 @@ this는 자바스크립트 엔진에 의해 암묵적으로 생성되며 코드 
 3. 생성자 함수 호출
 4. Function.prototype.apply/call/bind 메소드에 의한 간접 호출
 
-
-
 ### 메소드 호출
 
 메소드 내부의 this에는 메소드를 호출한 객체, 즉 메소드 이름 앞의 마침표(.) 연산자 앞에 기술한 객체가 바인딩된다. 주의할 것은 메소드 내부의 this는 메소드를 소유한 객체가 아닌 메소드를 호출한 객체에 바인딩된다는 것이다.
 
 ```javascript
 const person = {
-  name: 'Lee',
+  name: "Lee",
   getName() {
     // 메소드의 this는 메소드를 호출한 객체에 바인딩된다.
     return this.name;
-  }
+  },
 };
 
 // 메소드 getName을 호출한 객체는 person이다.
 console.log(person.getName()); // Lee
 const anotherPerson = {
-  name: 'Kim'
+  name: "Kim",
 };
 // 메소드 getName을 anotherPerson 객체의 메소드로 할당
 anotherPerson.getName = person.getName;
