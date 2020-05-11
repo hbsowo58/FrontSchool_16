@@ -266,8 +266,68 @@ Object,String등 내가 많이 아는것 40가지
 
 **문자열, 숫자, 불리언 값에 대해 객체처럼 접근하면 생성되는 임시 객체를 레퍼 객체(wrapper object)**라 한다.
 
+왜? -> 메서드를 사용하려고 타언어에서 명시적으로 해야줘야할 행위를 대신 암묵적으로 해준다.
+
+(123.5).toFixed()
+
+```javascript
+// ① 식별자 str은 문자열을 값으로 가지고 있다.
+const str = 'hello';
+
+// ② 식별자 str은 암묵적으로 생성된 래퍼 객체를 가리킨다.
+// 식별자 str의 값 'hello'는 레퍼 객체의 [[StringData]] 내부 슬롯에 할당된다.
+// 래퍼 객체에 name 프로퍼티가 동적 추가된다.
+str.name = 'Lee';
+
+// ③ 식별자 str은 다시 원래의 문자열, 즉 레퍼 객체의 [[StringData]] 내부 슬롯에 할당된 원시값을 갖는다.
+// 이때 ②에서 생성된 래퍼 객체는 아무도 참조하지 않는 상태이므로 가비지 컬렉션의 대상이 된다.
+
+// ④ 식별자 str은 새롭게 암묵적으로 생성된(②에서 생성된 래퍼 객체와는 다른) 레퍼 객체를 가리킨다.
+// 새롭게 생성된 래퍼 객체에는 name 프로퍼티가 존재하지 않는다.
+console.log(str.name); // undefined
+
+// ⑤ 식별자 str은 다시 원래의 문자열, 즉 레퍼 객체의 [[StringData]] 내부 슬롯에 할당된 원시값을 갖는다.
+// 이때 ④에서 생성된 래퍼 객체는 아무도 참조하지 않는 상태이므로 가비지 컬렉션의 대상이 된다.
+console.log(typeof str, str);
+```
+
+
+
+
+
 ### 전역객체
 
 > globalThis
 >
 > 2020년 5월 현재, 전역 객체를 가리키는 식별자를 [globalThis](https://github.com/tc39/proposal-global)로 통일하는 제안이 stage 4에 올라와 있다. globalThis는 크롬 71, 파이어폭스 65, 사파리 12.1, Edge 79, Node.js 12.0.0 이상에 이미 구현되어 있다.
+
+
+
+전역객체가 갖고있는 프로퍼티/ 메서드
+
+표준빌트인 전역프로퍼티
+
+Window.Infinity
+
+Window.NaN
+
+Window.undefined
+
+표준빌트인 전역 함수
+
+Window.eval (사용금지)
+
+Window.isFinite(조금사용)
+
+Window.isNaN(조금사용, 어떠한 두값끼리 비교했을때 같다고 나오지 않는 유일함)
+
+Window.parseFloat
+
+Window.pareseInt(빈도높음)
+
+Window.encodeURI / decodeURI
+
+WindowURIComponent / decodeURIComponent
+
+
+
