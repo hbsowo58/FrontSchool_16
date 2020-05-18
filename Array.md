@@ -4,7 +4,7 @@
 
 컴포넌트란? html에 제공하지않는 태그를 만든다
 
- html,css선언형언어들을 가져와서 나열한다
+html,css선언형언어들을 가져와서 나열한다
 
 나열되는 메서드를 잘알고 쓸 수 있어야된다(map의 활용빈도높음)
 
@@ -22,17 +22,17 @@ const foods = [];
 <br>
 
 ```javascript
-const arr = ['a', 'b', 'c']; // 배열 리터럴 방식
+const arr = ["a", "b", "c"]; // 배열 리터럴 방식
 ```
 
 배열이 가지고있는 값 요소(element), 자신의 위치를 갖는 인덱스(index)를 가짐 >0이상의정수
 
- 요소에 접근할때는 대괄호 표기법 사용 arr[0] , 요소의 개수를 나타내는 length프로퍼티 보유
+요소에 접근할때는 대괄호 표기법 사용 arr[0] , 요소의 개수를 나타내는 length프로퍼티 보유
 
 ->순회가능
 
 ```javascript
-typeof arr // object 배열은 객체이다.
+typeof arr; // object 배열은 객체이다.
 ```
 
 배열 리터럴, array 생성자함수 모두 Array.prototype을 가짐
@@ -58,7 +58,7 @@ typeof arr // object 배열은 객체이다.
 
 ### 배열 요소의 참조
 
-대괄호 표기법 사용 =  객체의 프로퍼티 키와 같은 역할
+대괄호 표기법 사용 = 객체의 프로퍼티 키와 같은 역할
 
 희소배열의 empty에 접근하면 undefined 출력(객체이기 때문)
 
@@ -113,4 +113,3 @@ Array.prototype.flat
 Array.prototype.sort
 
 > sort 역시 원본배열을 고친다. 그러나 고친 자기자신을 반환한다
-
