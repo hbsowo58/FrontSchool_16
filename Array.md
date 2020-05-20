@@ -113,3 +113,42 @@ Array.prototype.flat
 Array.prototype.sort
 
 > sort 역시 원본배열을 고친다. 그러나 고친 자기자신을 반환한다
+
+<br>
+
+```javascript
+// 만약 Array.prototype에 forEach 메소드가 존재하지 않으면 폴리필을 추가한다.
+//폴리필(최신 사양의 기능을 지원하지 않는 브라우저를 위해 누락된 최신 사양의 기능을 구현하여 추가하는 것을 폴리필(pollyfill)이라 한다.
+if (!Array.prototype.forEach) {
+  Array.prototype.forEach = function (callback, thisArg) {
+    // 전달받은 첫번째 인수가 함수가 아니면 TypeError를 발생시킨다.
+    if (typeof callback !== 'function') {
+      throw new TypeError(callback + ' is not a function');
+    }
+
+    // this로 사용할 두번째 인수를 전달받지 못하면 전역 객체를 this로 사용한다.
+    thisArg = thisArg || window;
+
+    // for 문으로 배열을 순회하면서 콜백 함수를 호출한다.
+    for (var i = 0; i < this.length; i++) {
+      //여기서 this는 메소드를 호출한 __.forEach 메소드를 호출한 객체(배열)
+      // call 메소드를 통해 두번째 인수로 전달받은 thisArg를 전달하면서 콜백 함수를 호출한다.
+      // 이때 콜백 함수의 인수로 배열 요소, 인덱스, 배열 자신을 전달한다.
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
+}
+```
+
+배열의 고차 함수를 사용할 때 결괏값을 예상해서 입력 배열과 출력 배열의 length가 같으면 map or filter 다르면 filter 또는 reduce 한 개 면 reudce 같거나 작으면 filter
+
+### reduce
+
+```javascript
+// 1부터 4까지 누적을 구한다.
+const sum = [1, 2, 3, 4].reduce((accumulator0, currentValue1, index0, array[1,2,3,4]) => accumulator0 + currentValue1, 0); //연산해서 accumulator1로 변경
+console.log(sum); // 10
+```
+
+<br>
+
