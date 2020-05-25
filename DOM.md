@@ -79,6 +79,14 @@ Node.prototype.parentNode 프로퍼티
 
 ### innerHTML
 
+- 보안이 약하다  스크립트 삽입공격
+
+- 안바뀌어도 되는 상태들도 렌더링(성능↓)
+
+- 마지막에 추가된다(삽입되는 요소의 위치를 지정할 수 없다)
+
+  => 해결책 createElement,isertAdjacentHTML
+
 ### insertAdjacentHTML
 
 ### 노드 삽입
