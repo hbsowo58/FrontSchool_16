@@ -1,13 +1,8 @@
-## **프론트엔드 16기** Test2
+# 프론트엔드 16기 - JAVASCRIPT TEST 2
 
 Q1) 자바스크립트에서 제공하는 원시 데이터 타입(primitive data type) 6개를 나열한 후 각 타입에 대한 설명을 **간략히** 써주세요.
 
-
-
 Q2) 데이터 타입이 필요한 이유를 2개 이상 **간략히** 써주세요.
-
-
-
 
 Q3) 일부 연산자는 다른 코드에 영향을 주는 부수 효과(side effect)가 있다. 다음 보기 중 부수 효과를 가지는 연산자는?
 
@@ -21,22 +16,15 @@ Q3) 일부 연산자는 다른 코드에 영향을 주는 부수 효과(side eff
 
 5.!
 
-
-
 Q4) 아래의 코드에 잘못된 점을 설명하세요.(20점)![img](https://lh6.googleusercontent.com/hhlTewl0Bl3hIDnNpETMVAdP52ORwBRCv0QGwc4o77gpm5gAct65RvanEKXfYDfO6UEcoLyrjzZAKai947HO_99sH9fcRvQD69vxpFr9pGZfMwYE0b1TESKoOqazQymMdm1pihDN)
 
-
-
-Q5) 아래 코드의 결과를 예측하고, 결과에 대해 설명하세요(각 10점)![img](https://lh6.googleusercontent.com/-gc9qzXCr6BwcW1zwGmwH3MBebWgK2aSVHf_LoRroAP10DENbeT3WS8WmyssVH_agkGScOm3H5j5HY5KkqShkyUYz662but3x_q69Le8mVj0EVXfn5vYB_zrnF-K4MWL_CA7S_Hb) 
-
-
-
-
+Q5) 아래 코드의 결과를 예측하고, 결과에 대해 설명하세요(각 10점)![img](https://lh6.googleusercontent.com/-gc9qzXCr6BwcW1zwGmwH3MBebWgK2aSVHf_LoRroAP10DENbeT3WS8WmyssVH_agkGScOm3H5j5HY5KkqShkyUYz662but3x_q69Le8mVj0EVXfn5vYB_zrnF-K4MWL_CA7S_Hb)
 
 1
 출제의도 : 자바스크립트 타입에 대한 이해
 <br>
 해설
+
 - 숫자(number) 타입: 숫자. 정수와 실수 구분 없이 하나의 숫자 타입만 존재
 - string - 문자열, 텍스트 데이터, 16비트 유니코드
 - undefined 타입: var 키워드로 선언된 변수에 암묵적으로 할당되는 값
@@ -94,7 +82,7 @@ ex)
 
 해설
 
-Foo에 null 값을 재할당한 이유를 알 수 없다(메모리 공간이 비어있음을 *알리기 위해?)*
+Foo에 null 값을 재할당한 이유를 알 수 없다(메모리 공간이 비어있음을 _알리기 위해?)_
 
 의도적 부재를 알리기 위함이라면, 스코프를 좁혀야 함
 
@@ -119,6 +107,5 @@ ex)
 ```javascript
 var a;
 var b = 1;
-(a+b)// a에 암묵적으로 들어간 undefined랑 숫자리터럴이 들어간 b랑 연산하여 어디에 어떻게 사용할지 추측이 불가능하다
+a + b; // a에 암묵적으로 들어간 undefined랑 숫자리터럴이 들어간 b랑 연산하여 어디에 어떻게 사용할지 추측이 불가능하다
 ```
-

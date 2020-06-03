@@ -1,4 +1,4 @@
-# **프론트엔드 16기** Test4
+# 프론트엔드 16기 - JAVASCRIPT TEST 4
 
 Q1) 다음 객체 리터럴을 사용하여 코드를 작성하였습니다. 메모리에 적재되는 과정을 ‘그림’을 통해 설명해 주세요. (20점)
 
@@ -17,7 +17,7 @@ Q4) 아래 코드의 실행 결과로 알맞은 것은?
 
 ![img](https://lh5.googleusercontent.com/Yho6KXHNiYobza5t70y9Mk27b8Y4rbsuZhLyCKceOIAD34UupRZIql10VNeR6HIiQHhet8KaOUoTieQ4ODle0tBZdH3plFMkpLvYgFeett31tKjy_w_-XSlLSj3r_B4fW8Ia5n_Y)
 
-1. undefined		2. ‘foo’		3. ‘bar’	4. 1     5. ReferenceError
+1. undefined 2. ‘foo’ 3. ‘bar’ 4. 1 5. ReferenceError
 
 <br>
 Q5) 아래 코드의 실행 결과와 해당 결과가 나올 수 있는 이유에 대해 설명해주세요.
@@ -34,7 +34,7 @@ Q5) 아래 코드의 실행 결과와 해당 결과가 나올 수 있는 이유�
 
 해설
 
-![IMG_20200512_171656](https://user-images.githubusercontent.com/48181483/81659483-b9a5f600-9474-11ea-8c0c-b4f5ebe3b89c.jpg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    var 키워드로 person 변수 식별자 선언하면 암묵적으로 undefined로 초기화한다 ⓐ
+![IMG_20200512_171656](https://user-images.githubusercontent.com/48181483/81659483-b9a5f600-9474-11ea-8c0c-b4f5ebe3b89c.jpg) var 키워드로 person 변수 식별자 선언하면 암묵적으로 undefined로 초기화한다 ⓐ
 
 그 후 객체를 평가하여 메모리에 적재하고ⓑ
 
@@ -47,7 +47,7 @@ person의 참조 값을 객체가 존재하는 메모리의 선두셀을 참조�
 
 해설
 
-변수에 원시 값을 갖는 변수를 할당하면 할당받는 변수에는 할당되는 변수의 원시 값이 복사되어 전달된다. 
+변수에 원시 값을 갖는 변수를 할당하면 할당받는 변수에는 할당되는 변수의 원시 값이 복사되어 전달된다.
 
 <br>객체를 가리키는 변수를 다른 변수에 할당하면 원본의 참조 값이 복사되어 전달된다.
 
@@ -67,7 +67,7 @@ person의 참조 값을 객체가 존재하는 메모리의 선두셀을 참조�
 
 해설
 
-객체가 존재하고, 그 안에 프로퍼티 키와 값의 쌍들로 이루어져 있다. 이때 
+객체가 존재하고, 그 안에 프로퍼티 키와 값의 쌍들로 이루어져 있다. 이때
 
 string = obj[1];에는 1이라는 프로퍼티 키로써 obj에서 프로퍼티 조회를 해서 변수에 할당한다.
 
@@ -81,5 +81,5 @@ string = 'foo' 이 상태로 obj[string]을 하게 되면 obj['foo']를 한 것�
 
 해설
 
-a와 b에는 같아 보이는(프로퍼티 키와 값이 동일한) 객체를 할당하였다. 이때 a===b를 하게 되면, 서로의 객체를 가지고 있는 메모리의 셀을 비교하게 되고 false가 출력된다 
+a와 b에는 같아 보이는(프로퍼티 키와 값이 동일한) 객체를 할당하였다. 이때 a===b를 하게 되면, 서로의 객체를 가지고 있는 메모리의 셀을 비교하게 되고 false가 출력된다
 (참조 값이 다르다). 그러나 a.name과 b.name을 참조해서 비교하게 되면 같은 문자열을 갖고 있어 true가 출력된다(값이 같다)
