@@ -1,5 +1,17 @@
 # promise
 
+비동기인 부분은 xhr.onload 뒷부분이지 앞부분이 비동기는 아니다
+
+비동기 코드의 일부분이 비동기인것이지 전체가 비동기인것은 아니다
+
+<br>
+
+비동기 함수는 왜 콜백을 써야할까? return이나 전역변수에 할당하면 안되나?
+
+-> 시점이 안맞는다. 비동기 코드가 언제 진행될지 모르기 때문이다.
+
+<br>
+
 자바스크립트는 비동기처리를 콜백함수 사용 -> 가독성 및 예외 처리 곤란
 
 => 프로미스 도입 (콜백 패턴 단점 보완)
@@ -114,3 +126,55 @@ fetch 함수는 HTTP 응답을 나타내는 Response 객체를 래핑한 프로�
 Response 객체
 
 Response.prototype에는 Response 객체에 포함되어 있는 HTTP 응답 몸체(body)를 위한 다양한 메서드를 제공한다. 예를 들어, fetch 함수가 반환한 프로미스가 래핑하고 있는 HTTP 응답 몸체를 취득하려면 Response.prototype.json 메서드를 사용한다. Response.prototype.json 메서드는 Response 객체에서 HTTP 응답 몸체(response.body)를 취득하여 역직렬화한다.
+
+
+
+![image-20200615130343171](C:\Users\82109\AppData\Roaming\Typora\typora-user-images\image-20200615130343171.png)
+
+이벤트가 발생하면 queue에 들어감, 실행은 콜스택이 비면
+
+<br>
+
+xhr.onload = () => {}
+
+xhr.send로 작성한 책들도 많다
+
+<br>
+
+이벤트 핸들러의 return은 받을 수 없다 -> why? 브라우저가 호출하니까
+
+<br>
+
+프로미스: 미래에 일어날 일에 대한 보증 수표
+
+상태가 변하면  -> ~ 콜백으로 우리가 할일 작성 -> 비동기의 표준
+
+<br>
+
+프로미스를 안다는 것은 비동기를 안다는 것 async/await도 promise 기반
+
+promise -> 모든 비동기 처리할때 사용 (ECMA SCIRPT) 사양 VS XMLHTTPReqeust는 web API라서
+
+노드환경에서 실행 x
+
+<br>
+
+new pormise(() => {})
+
+<br>
+
+then(성공콜백, 실패콜백) -> 실패콜백은 catch에서 추천
+
+성공콜백에는 resolve한애가 옴
+
+-> 콜백을 쓰기 싫어서 후속 처리 메서드 사용
+
+<br>
+
+Rest API HTTP 프로토콜
+
+명사 + 술어(리소스)
+
+명사 : 뭐를(메서드)
+
+술어 : URL 뒤에 붙이다 (GET/POST/PATCH/DELETE)
