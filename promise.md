@@ -16,6 +16,40 @@
 
 => 프로미스 도입 (콜백 패턴 단점 보완)
 
++ 에러 처리에 유리하다(XMLHTTPRequest도 불가능한것은 x)
++ 에러는 caller 방향으로 전파된다
++ map의 콜백에서 에러 => map에게 에러전파 => map을 호출한 ex)전역
+
+<br>
+
+자바스크립트 '엔진'은 싱글스레드고 브라우저는 멀티 스레드이다.
+
+비동기 함수의 에러는 유실되며, promise는 에러를 포함한 promise 객체를 만든다.
+
+promise.all을 사용하여 해결한다(병렬) <---> race(1등만 리턴한다)
+
+allSettled(성공/실패에 상관x)
+
+<br>
+
+task queue, microtask queue,  animaition queue
+
+(일반적인 비동기 함수의콜백은 task),(promise의 콜백은 micortask) => 그리하여 더 우선시된다
+
+<br>
+
+fetch 호출 -> 리턴값 promise -> then,catch 사용
+
+(http통신전용)
+
+promise는 모든 비동기에 사용
+
+fetch를하면 response 객체를 ressolve한 promise 객체를 반환한다
+
+await 뒤에는 promise가 오는 자리이며 async 함수 안에서 사용한다
+
+await는 동기처럼 작성할'때' 사용한다, 필요없다면 promiseAll을 사용하여도 된다
+
 <br>
 
 프로미스는 Promise 생성자 함수를 통해 인스턴스화 콜백함수를 인자로 받음(resolve와 reject함수를 인자로받음)
