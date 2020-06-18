@@ -18,6 +18,10 @@
 
 <br>
 
+ex)스코프를 나라에 비유하면, 이나라에 수출하고 저나라에서 수입해온다
+
+<br>
+
 # 자바스크립트와 모듈
 
 자바스크립트는 파일스코프와 import, export 지원x
@@ -171,3 +175,29 @@ module화를 하면 좋은점 (주관적)
 2. 유지보수하기 쉽다
 3. 재사용하기 쉽다
 4. 스코프를 통한 변수명 재사용이 가능하다
+
+<br>
+
+const foo = require('path') -> common js(동기)
+
+import {} from '_' ESM
+
+VS
+
+AMD 비동기
+
+---
+
+에버그린(상록수) => 영속적이고 '지속적'인 업데이트
+
+<br>
+
+ES6+(개발환경) + ES.NEXT (표준사양은 아니지만 표준이 될 가능성이 농후)
+
+Destructing, class filed
+
+<br>
+
+Babel + Webpack -> 프로젝트적용
+
+SASS = 변수,함수,CSS분리 및 조합 가능
